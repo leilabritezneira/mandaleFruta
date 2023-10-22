@@ -3,6 +3,16 @@ const app = express();
 const cors = require("cors");
 const mercadopago = require("mercadopago");
 const path = require("path");
+const { Pool } = require('pg');
+
+// Configuración de la conexión a la base de datos PostgreSQL
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'verduleria', 
+  password: 'postgres',
+  port: 5432,
+});
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
