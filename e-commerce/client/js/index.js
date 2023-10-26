@@ -8,16 +8,13 @@ fetch("/productos")
             content.className = "card";
             content.innerHTML = `
             <img src="${product.img}">
-            <h3>${product.product_name}</h3>
+            <h3>${product.name}</h3>
             <p>${product.price} $</p>
             `;
             shopContent.append(content);
-
             const buyButton = document.createElement("button");
             buyButton.innerText = "Comprar";
-
             content.append(buyButton);
-
             buyButton.addEventListener("click", ()=>{
                 const repeat = cart.some((repeatProduct) => repeatProduct.id === product.id);
                 if (repeat) {
@@ -30,9 +27,9 @@ fetch("/productos")
                 }else{
                     cart.push({
                         id: product.id,
-                        productName: product.productName,
+                        name: product.name,
                         price: product.price,
-                        quanty: product.quanty,
+                        quantity: 1,
                         img: product.img,
                     });
                     displayCartCounter();
