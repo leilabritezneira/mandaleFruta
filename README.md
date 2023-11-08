@@ -47,5 +47,5 @@
 });
     ```
    <br>
-7. Rellenamos nuestra base de datos local `"verduleria" ` con las tabla: `"productos" ` columnas: `"name", "quantity", "img", "price" `.<br>
+7. Rellenamos nuestra base de datos local `"verduleria" ` con las tabla: `"productos" `, con las columnas de : `"name", "quantity", "img", "price" `.<br>
 8. Lanzamos nuestro servidor: `npm start`.<br>
